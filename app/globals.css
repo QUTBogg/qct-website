@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-poppins: 'Poppins', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: auto; /* instant jumps */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+  /* ✅ let JS control scroll, don't hard-lock it here */
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ❌ DELETE all this:
+section:not(#home) {
+  display: none !important;
+}
+section.visible {
+  display: block !important;
+}
+section#home {
+  display: block !important;
+}
+*/

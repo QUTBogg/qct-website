@@ -90,7 +90,7 @@ const SponsorsSection = () => {
           </div>
 
           <p className="text-sm text-gray-600">
-            Interested in sponsoring? Contact our Finance team below!
+            Interested in sponsoring? Contact our Finance team!
           </p>
         </div>
 

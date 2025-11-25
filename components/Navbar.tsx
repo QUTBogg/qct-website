@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/team", label: "Team" },
   { href: "/toboggan", label: "The Toboggan" },
   { href: "/sponsors", label: "Sponsors" },
+  { href: "/awards", label: "Awards" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];

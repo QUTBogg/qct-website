@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { totalRaised, SPONSOR_GOAL_AMOUNT } from "@/data/sponsors";
 
@@ -55,25 +56,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Abstract Background */}
-          <div className="relative h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-baby-blue/20 via-light-grey to-baby-blue/10">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="grid grid-cols-3 gap-4 p-8 w-full">
-                {[...Array(9)].map((_, i) => (
-                  <div
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={i}
-                    className={`h-20 md:h-24 rounded-xl ${
-                      i % 3 === 0
-                        ? "bg-baby-blue/40"
-                        : i % 3 === 1
-                        ? "bg-baby-blue/20"
-                        : "bg-light-grey"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+          {/* Right Column - Hero Image */}
+          <div className="relative h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden">
+            <Image
+              src="/qct-hero.jpg"
+              alt="Queen's Concrete Toboggan Team"
+              fill
+              priority
+              className="object-cover"
+            />
           </div>
         </div>
 

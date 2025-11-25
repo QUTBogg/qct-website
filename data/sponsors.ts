@@ -9,7 +9,7 @@ export interface Sponsor {
 }
 
 export const sponsors: Sponsor[] = [
-  { name: "Isaac Operations", amount: 5000, tier: "Platinum" },
+  { name: "Samuel, Son & Co", amount: 5000, tier: "Platinum" },
   { name: "Res Group", amount: 2500, tier: "Gold" },
   { name: "EllisDon", amount: 2000, tier: "Silver" },
   { name: "B.M. Ross and Associates Limited", amount: 250, tier: "Bronze" },

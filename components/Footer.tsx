@@ -10,17 +10,17 @@ const Footer = () => {
 
           {/* Left - Logo and Name */}
           <div className="flex items-center gap-4">
-            <div className="relative h-16 w-16">  {/* bigger size */}
+            <div className="relative h-16 w-16">
               <Image
                 src="/logo.png"
                 alt="QCT Logo"
-                width={80}      // previously 48
-                height={80}     // increased
+                width={80}
+                height={80}
                 className="h-full w-auto object-contain"
               />
             </div>
             <p className="text-gray-700 font-medium">
-              Queen's Concrete Toboggan Team
+              Queen&apos;s Concrete Toboggan Team
             </p>
           </div>
 

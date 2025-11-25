@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { totalRaised, SPONSOR_GOAL_AMOUNT } from "@/data/sponsors";
 
 const Hero = () => {
@@ -124,10 +125,12 @@ const Hero = () => {
 
           {/* Right Column - Hero Image */}
           <div className="relative h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden">
-            <img
+            <Image
               src="/qct-hero.jpg"
-              alt="Queen's Concrete Toboggan Team"
-              className="w-full h-full object-cover"
+              alt="Queen&apos;s Concrete Toboggan Team"
+              fill
+              priority
+              className="object-cover"
             />
           </div>
         </div>

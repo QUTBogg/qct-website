@@ -1,3 +1,5 @@
+"use client";
+
 const AboutSection = () => {
   const eventCards = [
     {
@@ -27,7 +29,7 @@ const AboutSection = () => {
             <h3 className="text-2xl font-bold text-baby-blue">About QCT</h3>
             <div className="space-y-3 text-gray-700">
               <p>
-                <strong>Founded 2001</strong> - One of Queen's longest-running design teams
+                <strong>Founded 2001</strong> - One of Queen&apos;s longest-running design teams
               </p>
               <p>
                 <strong>100+ multidisciplinary members</strong> - Engineering students from across

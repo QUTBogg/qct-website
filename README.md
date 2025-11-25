@@ -6,7 +6,8 @@ A modern, responsive marketing website for the Queen's Concrete Toboggan Team (Q
 
 - Fully responsive design optimized for all devices
 - Modern UI with baby blue (#4DA3FF) accent colors
-- Smooth scrolling navigation
+- Sticky navbar routes to dedicated pages (no hash scrolling)
+- Hero CTAs use client-side routing for instant transitions
 - Dynamic sponsor funding tracker
 - Team roster with role-based organization
 - Contact form with validation
@@ -44,7 +45,13 @@ npm run dev
 ```
 ├── app/
 │   ├── layout.tsx          # Root layout with fonts and global styles
-│   ├── page.tsx            # Main page with all sections
+│   ├── page.tsx            # Landing / hero page
+│   ├── about/              # About QCT + GNCTR route
+│   ├── team/               # Team roster route
+│   ├── toboggan/           # Toboggan overview route
+│   ├── sponsors/           # Sponsors + funding tracker route
+│   ├── gallery/            # Gallery route
+│   ├── contact/            # Contact + form route
 │   └── globals.css         # Global styles and Tailwind imports
 ├── components/
 │   ├── Navbar.tsx          # Top navigation with large logo

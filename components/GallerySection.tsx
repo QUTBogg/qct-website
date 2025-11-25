@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 const GallerySection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -19,11 +18,9 @@ const GallerySection = () => {
   return (
     <section
       id="gallery"
-      // hidden by ScrollController initially
-      className="hidden opacity-0 min-h-screen bg-white transition-all duration-300"
+      className="min-h-screen pt-40 pb-20 bg-white"
     >
-      {/* 👇 navbar offset – SAME as Team + Toboggan */}
-      <div className="pt-56 md:pt-64 w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
+      <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           Gallery
         </h2>

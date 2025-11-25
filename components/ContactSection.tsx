@@ -4,9 +4,9 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="hidden opacity-0 min-h-screen bg-light-grey transition-all duration-300"
+      className="min-h-screen pt-40 pb-20 bg-light-grey"
     >
-      <div className="pt-56 md:pt-64 w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
+      <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 text-center">
           Contact Us
         </h2>

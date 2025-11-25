@@ -15,7 +15,7 @@
 }
 
 html {
-  scroll-behavior: auto; /* instant jumps */
+  scroll-behavior: auto;
   width: 100%;
   overflow-x: hidden;
 }
@@ -27,20 +27,7 @@ body {
   line-height: 1.6;
   width: 100%;
   overflow-x: hidden;
-  /* ✅ let JS control scroll, don't hard-lock it here */
   overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-/* ❌ DELETE all this:
-section:not(#home) {
-  display: none !important;
-}
-section.visible {
-  display: block !important;
-}
-section#home {
-  display: block !important;
-}
-*/

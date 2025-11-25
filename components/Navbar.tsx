@@ -1,9 +1,22 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/team", label: "Team" },
+  { href: "/toboggan", label: "The Toboggan" },
+  { href: "/sponsors", label: "Sponsors" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
+];
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -13,46 +26,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#team", label: "Team" },
-    { href: "#toboggan", label: "The Toboggan" },
-    { href: "#sponsors", label: "Sponsors" },
-    { href: "#gallery", label: "Gallery" },
-    { href: "#contact", label: "Contact" },
-  ];
+  const closeMenu = () => setIsOpen(false);
 
-  const showSection = (id: string) => {
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section) => {
-      const el = section as HTMLElement;
-      if (el.id === id) {
-        el.classList.remove("hidden", "opacity-0");
-        el.classList.add("opacity-100");
-      } else {
-        el.classList.add("hidden", "opacity-0");
-      }
-    });
-
-    if (id === "home") {
-      document.body.style.overflowY = "hidden";
-      window.scrollTo({ top: 0, behavior: "auto" });
-    } else {
-      document.body.style.overflowY = "auto";
-      window.scrollTo({ top: 0, behavior: "auto" });
-    }
-  };
-
-  const handleLinkClick = (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
-    href: string
-  ) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const id = href.replace("#", "");
-    showSection(id);
-    setIsOpen(false);
-  };
+  const linkClasses = (href: string) =>
+    `text-gray-700 hover:text-baby-blue font-semibold text-lg md:text-xl tracking-wide transition-colors duration-200 ${
+      pathname === href ? "text-baby-blue" : ""
+    }`;
 
   return (
     <nav
@@ -60,54 +39,48 @@ const Navbar = () => {
         scrolled ? "shadow-md" : "shadow-sm"
       }`}
     >
-      <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
-        <div className="flex items-center justify-between h-36 md:h-44 lg:h-52">
-          
-          {/* ⭐ MASSIVE LOGO (5× larger image, inside same container height) */}
-          <a
-            href="#home"
-            onClick={(e) => handleLinkClick(e, "#home")}
+      <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-6">
+        <div className="flex items-center justify-between h-32 md:h-36 lg:h-40">
+          {/* Logo */}
+          <Link
+            href="/"
             className="flex items-center cursor-pointer"
+            onClick={closeMenu}
           >
-            <div className="relative h-38 md:h-46 lg:h-54 w-auto">
+            <div className="relative h-24 md:h-28 lg:h-32 w-auto">
               <Image
                 src="/logo.png"
                 alt="QCT Logo"
-                width={500}  // HUGE
-                height={500} // HUGE
+                width={360}
+                height={360}
                 className="h-full w-auto object-contain"
                 priority
               />
             </div>
-          </a>
+          </Link>
 
-          {/* ⭐ MASSIVE NAV TEXT (4–5× size) */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                onClick={(e) => handleLinkClick(e, link.href)}
-                className="text-gray-700 hover:text-baby-blue font-bold 
-                           text-2xl lg:text-3xl tracking-wide transition-colors duration-200"
+                className={linkClasses(link.href)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* Mobile Button */}
+          {/* Mobile Toggle */}
           <button
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              setIsOpen(!isOpen);
-            }}
+            onClick={() => setIsOpen((prev) => !prev)}
             className="md:hidden p-2 text-gray-700"
             type="button"
+            aria-label="Toggle menu"
           >
             <svg
-              className="h-10 w-10" // bigger icon
+              className="h-8 w-8"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -122,17 +95,18 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-6 space-y-4 bg-white border-t border-gray-200 mt-2">
             {navLinks.map((link) => (
-              <button
+              <Link
                 key={link.href}
-                onClick={(e) => handleLinkClick(e, link.href)}
-                className="block w-full text-left text-gray-700 hover:text-baby-blue 
-                           font-bold text-2xl py-4"
+                href={link.href}
+                className="block w-full text-left text-gray-700 hover:text-baby-blue font-semibold text-xl py-3"
+                onClick={closeMenu}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
           </div>
         )}

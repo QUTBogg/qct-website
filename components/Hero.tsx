@@ -1,81 +1,13 @@
 "use client";
 
-import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { totalRaised, SPONSOR_GOAL_AMOUNT } from "@/data/sponsors";
 
 const Hero = () => {
-  const handleSponsorshipClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const router = useRouter();
 
-    // Hide home section
-    const homeSection = document.querySelector("#home") as HTMLElement;
-    const targetSection = document.querySelector("#sponsors") as HTMLElement;
-
-    if (!targetSection) {
-      console.error("Sponsors section not found!");
-      return;
-    }
-
-    if (homeSection) {
-      homeSection.style.display = "none";
-    }
-
-    // Show target section
-    targetSection.classList.add("visible");
-    targetSection.style.display = "block";
-
-    // Enable scrolling
-    document.body.style.overflowY = "auto";
-
-    // Wait for browser to render, then scroll
-    setTimeout(() => {
-      const navbarHeight = 180;
-      const elementTop = targetSection.offsetTop;
-      const scrollPosition = Math.max(0, elementTop - navbarHeight);
-
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: "auto",
-      });
-    }, 100);
-  };
-
-  const handleTeamClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    // Hide home section
-    const homeSection = document.querySelector("#home") as HTMLElement;
-    const targetSection = document.querySelector("#team") as HTMLElement;
-
-    if (!targetSection) {
-      console.error("Team section not found!");
-      return;
-    }
-
-    if (homeSection) {
-      homeSection.style.display = "none";
-    }
-
-    // Show target section
-    targetSection.classList.add("visible");
-    targetSection.style.display = "block";
-
-    // Enable scrolling
-    document.body.style.overflowY = "auto";
-
-    // Wait for browser to render, then scroll
-    setTimeout(() => {
-      const navbarHeight = 180;
-      const elementTop = targetSection.offsetTop;
-      const scrollPosition = Math.max(0, elementTop - navbarHeight);
-
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: "auto",
-      });
-    }, 100);
+  const goTo = (path: string) => {
+    router.push(path);
   };
 
   return (
@@ -109,13 +41,13 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
-                onClick={handleSponsorshipClick}
+                onClick={() => goTo("/sponsors")}
                 className="px-8 py-3 bg-baby-blue text-white rounded-lg font-semibold hover:bg-baby-blue/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
               >
                 View Sponsorship Opportunities
               </button>
               <button
-                onClick={handleTeamClick}
+                onClick={() => goTo("/team")}
                 className="px-8 py-3 border-2 border-baby-blue text-baby-blue rounded-lg font-semibold hover:bg-baby-blue/5 transition-colors duration-200"
               >
                 Meet the Team
@@ -123,15 +55,25 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Hero Image */}
-          <div className="relative h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden">
-            <Image
-              src="/qct-hero.jpg"
-              alt="Queen&apos;s Concrete Toboggan Team"
-              fill
-              priority
-              className="object-cover"
-            />
+          {/* Right Column - Abstract Background */}
+          <div className="relative h-80 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-baby-blue/20 via-light-grey to-baby-blue/10">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="grid grid-cols-3 gap-4 p-8 w-full">
+                {[...Array(9)].map((_, i) => (
+                  <div
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={i}
+                    className={`h-20 md:h-24 rounded-xl ${
+                      i % 3 === 0
+                        ? "bg-baby-blue/40"
+                        : i % 3 === 1
+                        ? "bg-baby-blue/20"
+                        : "bg-light-grey"
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

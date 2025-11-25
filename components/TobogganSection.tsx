@@ -1,14 +1,10 @@
-"use client";
-
 const TobogganSection = () => {
   return (
     <section
       id="toboggan"
-      // remove padding here; ScrollController will add/remove hidden classes
-      className="hidden opacity-0 min-h-screen bg-white transition-all duration-300"
+      className="min-h-screen pt-40 pb-20 bg-white"
     >
-      {/* 👇 THIS is the padding that pushes the whole section down below navbar */}
-      <div className="pt-56 md:pt-64 w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
+      <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           The Toboggan
         </h2>

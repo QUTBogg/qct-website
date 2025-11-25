@@ -1,5 +1,3 @@
-"use client";
-
 const AboutSection = () => {
   const eventCards = [
     {
@@ -17,7 +15,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="min-h-screen py-20 md:py-24 bg-white">
+    <section id="about" className="min-h-screen pt-36 pb-20 md:pt-40 md:pb-24 bg-white">
       <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           About Us

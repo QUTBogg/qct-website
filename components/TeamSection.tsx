@@ -1,5 +1,3 @@
-"use client";
-
 import { teamMembers, RoleType } from "@/data/team";
 
 const TeamSection = () => {
@@ -39,11 +37,9 @@ const TeamSection = () => {
   return (
     <section
       id="team"
-      // keep hidden/opacity for ScrollController
-      className="hidden opacity-0 min-h-screen bg-light-grey transition-all duration-300"
+      className="min-h-screen pt-40 pb-20 bg-light-grey"
     >
-      {/* 👇 BIG TOP PADDING SO IT SITS BELOW THE NAVBAR */}
-      <div className="pt-56 md:pt-64 w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
+      <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           Our Team
         </h2>

@@ -51,24 +51,6 @@ const SponsorsSection = () => {
           Our Sponsors
         </h2>
 
-        {/* Sponsor CTA */}
-        <div className="bg-white rounded-2xl p-8 md:p-10 mb-12 shadow-lg text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Interested in Sponsoring?
-          </h3>
-          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Support the Queen&apos;s Concrete Toboggan Team and help us compete
-            at GNCTR 2026 in London, ON. Reach out to our Finance & Sponsorship
-            team to learn more about sponsorship opportunities.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block px-8 py-3 bg-baby-blue text-white rounded-lg font-semibold hover:bg-baby-blue/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
-          >
-            Contact Our Finance Team
-          </a>
-        </div>
-
         {/* Sponsors by Tier */}
         <div className="space-y-12">
           {tierOrder.map((tier) => {
@@ -104,6 +86,24 @@ const SponsorsSection = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Sponsor CTA */}
+        <div className="mt-16 bg-white rounded-2xl p-8 md:p-10 shadow-lg text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Interested in Sponsoring?
+          </h3>
+          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            Support the Queen&apos;s Concrete Toboggan Team and help us compete
+            at GNCTR 2026 in London, ON. Reach out to our Finance & Sponsorship
+            team to learn more about sponsorship opportunities.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block px-8 py-3 bg-baby-blue text-white rounded-lg font-semibold hover:bg-baby-blue/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            Contact Our Finance Team
+          </a>
         </div>
       </div>
     </section>

@@ -1,10 +1,4 @@
-import {
-  sponsors,
-  SponsorTier,
-  totalRaised,
-  SPONSOR_GOAL_AMOUNT,
-  progress,
-} from "@/data/sponsors";
+import { sponsors, SponsorTier } from "@/data/sponsors";
 
 const SponsorsSection = () => {
   const getTierColor = (tier: SponsorTier) => {
@@ -57,41 +51,22 @@ const SponsorsSection = () => {
           Our Sponsors
         </h2>
 
-        {/* Progress Card */}
-        <div className="bg-white rounded-2xl p-8 md:p-10 mb-12 shadow-lg">
-          <div className="mb-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              Funding Progress
-            </h3>
-            <p className="text-gray-600">
-              Help us reach our goal for GNCTR 2026 in London, ON
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-2xl md:text-3xl font-bold text-baby-blue">
-                ${totalRaised.toLocaleString()}
-              </span>
-              <span className="text-lg text-gray-600">
-                of ${SPONSOR_GOAL_AMOUNT.toLocaleString()}
-              </span>
-            </div>
-            <div className="w-full bg-light-grey rounded-full h-4 md:h-5 overflow-hidden">
-              <div
-                className="h-full bg-baby-blue rounded-full transition-all duration-500 flex items-center justify-end pr-2"
-                style={{ width: `${Math.min(progress, 100)}%` }}
-              >
-                <span className="text-xs font-semibold text-white">
-                  {Math.round(progress)}%
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-sm text-gray-600">
-            Interested in sponsoring? Contact our Finance team!
+        {/* Sponsor CTA */}
+        <div className="bg-white rounded-2xl p-8 md:p-10 mb-12 shadow-lg text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Interested in Sponsoring?
+          </h3>
+          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            Support the Queen&apos;s Concrete Toboggan Team and help us compete
+            at GNCTR 2026 in London, ON. Reach out to our Finance & Sponsorship
+            team to learn more about sponsorship opportunities.
           </p>
+          <a
+            href="/contact"
+            className="inline-block px-8 py-3 bg-baby-blue text-white rounded-lg font-semibold hover:bg-baby-blue/90 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            Contact Our Finance Team
+          </a>
         </div>
 
         {/* Sponsors by Tier */}

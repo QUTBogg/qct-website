@@ -153,7 +153,7 @@ const AwardsSection = () => {
         </div>
 
         {/* Stats Summary */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
           <div className="text-center p-6 bg-white rounded-xl shadow-md">
             <div className="text-3xl md:text-4xl font-bold text-baby-blue mb-2">
               {awards.length}
@@ -176,14 +176,6 @@ const AwardsSection = () => {
             </div>
             <div className="text-sm md:text-base text-gray-600">
               Silver Awards
-            </div>
-          </div>
-          <div className="text-center p-6 bg-white rounded-xl shadow-md">
-            <div className="text-3xl md:text-4xl font-bold text-baby-blue mb-2">
-              2
-            </div>
-            <div className="text-sm md:text-base text-gray-600">
-              Competition Years
             </div>
           </div>
         </div>

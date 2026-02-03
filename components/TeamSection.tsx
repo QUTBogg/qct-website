@@ -1,4 +1,13 @@
+"use client";
+
+import Image from "next/image";
 import { teamMembers, RoleType } from "@/data/team";
+
+// Helper function to convert name to image filename
+// Files have double .jpg.jpg extension
+const getNameToImagePath = (name: string): string => {
+  return `/headshots/${name.toLowerCase().replace(/\s+/g, "-")}.jpg.jpg`;
+};
 
 const TeamSection = () => {
   const leadershipRoles: RoleType[] = [
@@ -51,24 +60,40 @@ const TeamSection = () => {
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {leadership.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
+            {leadership.map((member, index) => {
+              const imagePath = getNameToImagePath(member.name);
+              return (
                 <div
-                  className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${getRoleColor(
-                    member.role
-                  )}`}
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-200 text-center"
                 >
-                  {member.role}
-                </div>
+                  {/* Headshot */}
+                  <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-baby-blue/20 shadow-md bg-light-grey">
+                    <Image
+                      src={imagePath}
+                      alt={member.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 128px, 128px"
+                    />
+                  </div>
 
-                <h4 className="text-lg font-semibold text-gray-900">
-                  {member.name}
-                </h4>
-              </div>
-            ))}
+                  {/* Role Badge */}
+                  <div
+                    className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-2 ${getRoleColor(
+                      member.role
+                    )}`}
+                  >
+                    {member.role}
+                  </div>
+
+                  {/* Name */}
+                  <h4 className="text-lg font-semibold text-gray-900">
+                    {member.name}
+                  </h4>
+                </div>
+              );
+            })}
           </div>
         </div>
 

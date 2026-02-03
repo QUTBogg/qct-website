@@ -1,21 +1,20 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 
 const GallerySection = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  // Actual gallery items – add more as you drop files into /public/gallery
-  const galleryItems = [
-    {
-      id: 1,
-      src: "/gallery/team2024.jpeg", // ✅ file at public/gallery/team2024.jpeg
-      caption: "Team at GNCTR 2024",
-    },
-    // Example for later:
-    // { id: 2, src: "/gallery/testing_day.jpg", caption: "Toboggan Testing" },
-    // { id: 3, src: "/gallery/concrete_mix.jpg", caption: "Concrete Mix Design" },
+  // Simply add image filenames here - just drop images into /public/gallery/ folder
+  // Format: "filename.jpg" or "filename.jpeg" or "filename.png"
+  const galleryImages = [
+    "team2024.jpeg",
+    "your-image-1.jpg",
+    "your-image-2.jpg",
+    "your-image-3.jpg",
+    "your-image-4.jpg.jpg", // Note: double extension
+    "your-image-5.jpg",
+    "your-image-6.jpg",
+    "your-image-7.jpg",
+    "your-image-8.jpg",
   ];
 
   return (
@@ -28,34 +27,33 @@ const GallerySection = () => {
           Gallery
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {galleryItems.map((item, index) => (
-            <div
-              key={item.id}
-              className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-shadow duration-300"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              {/* Actual image */}
-              <Image
-                src={item.src}
-                alt={item.caption}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              />
-
-              {/* Hover Overlay */}
-              {hoveredIndex === index && (
-                <div className="absolute inset-0 bg-baby-blue/90 flex items-center justify-center transition-opacity duration-300">
-                  <p className="text-white font-semibold text-center px-4">
-                    {item.caption}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+        {galleryImages.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="text-gray-500 text-lg">
+              No images yet. Add images to the gallery array in{" "}
+              <code className="bg-light-grey px-2 py-1 rounded">
+                components/GallerySection.tsx
+              </code>
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {galleryImages.map((imageName, index) => (
+              <div
+                key={index}
+                className="relative aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <Image
+                  src={`/gallery/${imageName}`}
+                  alt={`Gallery image ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

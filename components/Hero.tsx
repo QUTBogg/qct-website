@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { totalRaised, SPONSOR_GOAL_AMOUNT } from "@/data/sponsors";
 
 const Hero = () => {
   const router = useRouter();
@@ -64,30 +63,6 @@ const Hero = () => {
               fill
               priority
               className="object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Funding Progress */}
-        <div className="mt-16 md:mt-20 p-6 bg-light-grey rounded-xl">
-          <div className="flex items-center justify-between mb-3">
-            <span className="text-gray-700 font-medium">
-              Raised ${totalRaised.toLocaleString()} of $
-              {SPONSOR_GOAL_AMOUNT.toLocaleString()} goal
-            </span>
-            <span className="text-baby-blue font-semibold">
-              {Math.round((totalRaised / SPONSOR_GOAL_AMOUNT) * 100)}%
-            </span>
-          </div>
-          <div className="w-full bg-white rounded-full h-3 overflow-hidden">
-            <div
-              className="h-full bg-baby-blue rounded-full transition-all duration-500"
-              style={{
-                width: `${Math.min(
-                  (totalRaised / SPONSOR_GOAL_AMOUNT) * 100,
-                  100
-                )}%`,
-              }}
             />
           </div>
         </div>

@@ -1,0 +1,23 @@
+# Headshot Images
+# 
+# Place leadership headshot images here with the following naming convention:
+# - Convert name to lowercase
+# - Replace spaces with hyphens
+# - Use .jpg extension
+#
+# Examples:
+# - Thomas Carrie → thomas-carrie.jpg
+# - Ciaran Henning → ciaran-henning.jpg
+# - Jordan Raftis → jordan-raftis.jpg
+# - Evan Wansbrough → evan-wansbrough.jpg
+# - Evan Kischer → evan-kischer.jpg
+# - Jamie Taylor → jamie-taylor.jpg
+# - Avery Martin → avery-martin.jpg
+# - Nolan Carson → nolan-carson.jpg
+# - Claire Mount → claire-mount.jpg
+# - Ella Hoffman → ella-hoffman.jpg
+# - Brendan Deeves → brendan-deeves.jpg
+#
+# Recommended image size: 400x400px or larger (square format)
+# Images will be automatically cropped to circular format
+

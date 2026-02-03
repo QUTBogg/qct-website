@@ -29,9 +29,15 @@ A modern, responsive marketing website for the Queen's Concrete Toboggan Team (Q
 npm install
 ```
 
-2. Add the logo file:
-   - Place your logo at `/public/logo.png`
-   - Recommended size: 200x200px or larger (will be scaled)
+2. Add images:
+   - **Logo**: Place at `/public/logo.png` (recommended: 200x200px or larger)
+   - **Hero Image**: Place at `/public/qct-hero.jpg` (recommended: 1200x800px or larger)
+   - **Headshots**: Place leadership headshots in `/public/headshots/` with naming convention:
+     - Convert name to lowercase
+     - Replace spaces with hyphens
+     - Use `.jpg` extension
+     - Example: `Thomas Carrie` → `thomas-carrie.jpg`
+     - Recommended size: 400x400px (square format, will be cropped to circle)
 
 3. Run the development server:
 ```bash

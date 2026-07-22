@@ -14,8 +14,10 @@ const TeamSection = () => {
     "Captain",
     "Concrete Head",
     "Mechanical Head",
+    "Ski Profile Head",
     "Finance Head",
-    "Tech Exec",
+    "Spirit Head",
+    "Tech Ex Head",
     "Grad Advisor",
   ];
 
@@ -33,9 +35,11 @@ const TeamSection = () => {
         return "bg-baby-blue text-white";
       case "Concrete Head":
       case "Mechanical Head":
+      case "Ski Profile Head":
       case "Finance Head":
         return "bg-baby-blue/20 text-baby-blue";
-      case "Tech Exec":
+      case "Tech Ex Head":
+      case "Spirit Head":
       case "Grad Advisor":
         return "bg-baby-blue/10 text-baby-blue";
       default:

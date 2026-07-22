@@ -27,10 +27,10 @@ const ContactSection = () => {
             </p>
             <div className="space-y-3 text-gray-800 text-base md:text-lg">
               <p>
-                <strong>Thomas Carrie</strong>
+                <strong>Ryan Currie</strong>
               </p>
               <p>
-                <strong>Ciaran Henning</strong>
+                <strong>Simone Duifhuis</strong>
               </p>
               <p className="pt-3">
                 <a
@@ -54,27 +54,27 @@ const ContactSection = () => {
             <div className="space-y-4 text-gray-800 text-base md:text-lg">
               <div>
                 <p>
-                  <strong>Evan Wansbrough</strong>
+                  <strong>Gavin Bhattacharya</strong>
                 </p>
                 <p>
                   <a
-                    href="mailto:21ejw11@queensu.ca"
+                    href="mailto:gavin.bhattacharya@queensu.ca"
                     className="text-baby-blue hover:underline font-semibold"
                   >
-                    21ejw11@queensu.ca
+                    gavin.bhattacharya@queensu.ca
                   </a>
                 </p>
               </div>
               <div>
                 <p>
-                  <strong>Jordan Raftis</strong>
+                  <strong>Liam Cavanagh</strong>
                 </p>
                 <p>
                   <a
-                    href="mailto:jordan.raftis@queensu.ca"
+                    href="mailto:21ldc2@queensu.ca"
                     className="text-baby-blue hover:underline font-semibold"
                   >
-                    jordan.raftis@queensu.ca
+                    21ldc2@queensu.ca
                   </a>
                 </p>
               </div>

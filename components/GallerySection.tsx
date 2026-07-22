@@ -6,15 +6,24 @@ const GallerySection = () => {
   // Simply add image filenames here - just drop images into /public/gallery/ folder
   // Format: "filename.jpg" or "filename.jpeg" or "filename.png"
   const galleryImages = [
-    "team2024.jpeg",
     "your-image-1.jpg",
     "your-image-2.jpg",
     "your-image-3.jpg",
-    "your-image-4.jpg.jpg", // Note: double extension
-    "your-image-5.jpg",
+    "your-image-4.jpg",
+    "your-image-5.jpeg",
     "your-image-6.jpg",
-    "your-image-7.jpg",
-    "your-image-8.jpg",
+    "your-image-87.jpg",
+    "your-image-88.jpg",
+    "your-image-89.PNG",
+    "your-image-90.jpg",
+    "your-image-92.jpg",
+    "your-image-93.jpg",
+    "your-image-94.jpg",
+    "your-image-95.jpg",
+    "your-image-96.jpg",
+    "your-image-97.jpg",
+    "your-image-98.jpg",
+    "your-image-99.jpg",
   ];
 
   return (

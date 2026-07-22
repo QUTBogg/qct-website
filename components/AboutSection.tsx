@@ -67,7 +67,7 @@ const AboutSection = () => {
                 <li>Concrete mix design</li>
               </ul>
               <p className="pt-2">
-                <strong>GNCTR 2026</strong> will be held in <strong>London, ON</strong>
+                <strong>GNCTR 2027</strong> will be held in <strong>Edmonton, AB</strong>
               </p>
             </div>
           </div>

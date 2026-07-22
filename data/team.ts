@@ -2,8 +2,10 @@ export type RoleType =
   | "Captain"
   | "Concrete Head"
   | "Mechanical Head"
+  | "Ski Profile Head"
   | "Finance Head"
-  | "Tech Exec"
+  | "Spirit Head"
+  | "Tech Ex Head"
   | "Grad Advisor"
   | "General Member";
 
@@ -14,41 +16,37 @@ export interface TeamMember {
 
 export const teamMembers: TeamMember[] = [
   // Leadership – Captains
-  { name: "Thomas Carrie", role: "Captain" },
-  { name: "Ciaran Henning", role: "Captain" },
+  { name: "Ryan Currie", role: "Captain" },
+  { name: "Simone Duifhuis", role: "Captain" },
 
   // Leadership – Finance
-  { name: "Jordan Raftis", role: "Finance Head" },
-  { name: "Evan Wansbrough", role: "Finance Head" },
+  { name: "Gavin Bhattacharya", role: "Finance Head" },
+  { name: "Liam Cavanagh", role: "Finance Head" },
 
   // Leadership – Concrete
-  { name: "Evan Kischer", role: "Concrete Head" },
-  { name: "Jamie Taylor", role: "Concrete Head" },
+  { name: "Darryl Gladston", role: "Concrete Head" },
+  { name: "Tiana Maedel", role: "Concrete Head" },
+
+  // Leadership – Ski Profile
+  { name: "Olek Guy", role: "Ski Profile Head" },
+  { name: "Oliver Price", role: "Ski Profile Head" },
 
   // Leadership – Mechanical
-  { name: "Avery Martin", role: "Mechanical Head" },
-  { name: "Nolan Carson", role: "Mechanical Head" },
+  { name: "Darryl Gladston", role: "Mechanical Head" },
+  { name: "Ryan Johnston", role: "Mechanical Head" },
+  { name: "Justin MacLeod", role: "Mechanical Head" },
 
-  // Leadership – Tech Execs
-  { name: "Claire Mount", role: "Tech Exec" },
-  { name: "Ella Hoffman", role: "Tech Exec" },
+  // Leadership – Spirit
+  { name: "Gabrielle Kline", role: "Spirit Head" },
+  { name: "Elysium Phillips", role: "Spirit Head" },
+
+  // Leadership – Tech Ex
+  { name: "Aria Rechsteiner", role: "Tech Ex Head" },
+  { name: "Peter Stewart", role: "Tech Ex Head" },
 
   // Leadership – Grad Advisor
   { name: "Brendan Deeves", role: "Grad Advisor" },
 
   // General Members
-  { name: "Sienna Weatherly", role: "General Member" },
-  { name: "Colten Rolheiser", role: "General Member" },
-  { name: "Luke Piercey", role: "General Member" },
-  { name: "Elysium Phillips", role: "General Member" },
-  { name: "Simone Duifhuis", role: "General Member" },
-  { name: "Gabrielle Kline", role: "General Member" },
-  { name: "Jacob Rothauser", role: "General Member" },
-  { name: "Eddie Fitzgerald", role: "General Member" },
-  { name: "Tiana Maedel", role: "General Member" },
-  { name: "Aria Rechsteiner", role: "General Member" },
-  { name: "Oliver Price", role: "General Member" },
-  { name: "Darryl Gladston", role: "General Member" },
-  { name: "Justin MacLeod", role: "General Member" },
-  { name: "Toby Holland", role: "General Member" },
+  { name: "TBD", role: "General Member" },
 ];

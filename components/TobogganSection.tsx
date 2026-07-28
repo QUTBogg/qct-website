@@ -15,7 +15,7 @@ const TobogganSection = () => {
           
           {/* Left Column - Overview */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-baby-blue">
+            <h3 className="text-xl font-bold text-baby-blue text-center">
               Engineering the fastest, safest sled possible
             </h3>
 
@@ -67,23 +67,29 @@ const TobogganSection = () => {
           </div>
 
           {/* Right Column - 3D Model */}
-          <div className="relative">
-            <div className="bg-light-grey rounded-2xl p-4 md:p-6 h-80 md:h-96 lg:h-[500px] flex items-center justify-center border-2 border-baby-blue/30">
+          <div className="space-y-4">
+            <h4 className="text-xl font-bold text-baby-blue text-center">
+              Our 2026 Design
+            </h4>
+
+            <div className="relative">
+              <div className="bg-light-grey rounded-2xl p-4 md:p-6 h-80 md:h-96 lg:h-[500px] flex items-center justify-center border-2 border-baby-blue/30">
               
-              {/* @ts-ignore */}
-              <model-viewer
-                src="/models/toboggan.glb"
-                alt="QCT Toboggan 3D Model"
-                camera-controls
-                auto-rotate
-                shadow-intensity="1"
-                exposure="1"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  background: "transparent"
-                }}
+                {/* @ts-ignore */}
+                <model-viewer
+                  src="/models/toboggan.glb"
+                  alt="QCT Toboggan 3D Model"
+                  camera-controls
+                  auto-rotate
+                  shadow-intensity="1"
+                  exposure="1"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    background: "transparent"
+                  }}
               />
+              </div>
             </div>
           </div>
 

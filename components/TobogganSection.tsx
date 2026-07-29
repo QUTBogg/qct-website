@@ -11,11 +11,11 @@ const TobogganSection = () => {
           The Toboggan
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
           
           {/* Left Column - Overview */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-baby-blue text-center">
+            <h3 className="text-xl font-bold text-baby-blue text-center mb-6">
               Engineering the fastest, safest sled possible
             </h3>
 
@@ -68,7 +68,7 @@ const TobogganSection = () => {
 
           {/* Right Column - 3D Model */}
           <div className="space-y-4">
-            <h4 className="text-xl font-bold text-baby-blue text-center">
+            <h4 className="text-xl font-bold text-baby-blue text-center mb-6">
               Our 2026 Design
             </h4>
 

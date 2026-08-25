@@ -34,7 +34,10 @@ export const teamMembers: TeamMember[] = [
   // Leadership – Mechanical
   { name: "Darryl Gladston", role: "Mechanical Head" },
   { name: "Ryan Johnston", role: "Mechanical Head" },
+  { name: "Nicholas Letourneau", role: "Mechanical Head" },
   { name: "Justin MacLeod", role: "Mechanical Head" },
+  { name: "Avery Martin", role: "Mechanical Head" },
+  { name: "Sebastien McBride", role: "Mechanical Head" },
 
   // Leadership – Spirit
   { name: "Gabrielle Kline", role: "Spirit Head" },

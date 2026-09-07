@@ -95,7 +95,7 @@ const SponsorsSection = () => {
           </h3>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
             Support the Queen&apos;s Concrete Toboggan Team and help us compete
-            at GNCTR 2026 in London, ON. Reach out to our Finance & Sponsorship
+            at GNCTR 2027 in Edmonton, AB. Reach out to our Finance & Sponsorship
             team to learn more about sponsorship opportunities.
           </p>
           <a

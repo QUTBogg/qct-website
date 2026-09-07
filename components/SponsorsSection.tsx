@@ -48,7 +48,7 @@ const SponsorsSection = () => {
     >
       <div className="w-full max-w-[95%] md:max-w-[90%] lg:max-w-[85%] mx-auto px-3 sm:px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-          Our Sponsors
+          Our 2026 Sponsors
         </h2>
 
         {/* Sponsors by Tier */}

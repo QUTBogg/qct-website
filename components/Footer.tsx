@@ -23,6 +23,29 @@ const Footer = () => {
               Queen&apos;s Concrete Toboggan Team
             </p>
           </div>
+          
+          <div className="flex items-center gap-3">
+           <div className="relative h-10 w-10">
+             <Image
+              src="/ig.jpg"
+              alt="IG Logo"
+              width={50}
+             height={50}
+             className="h-full w-auto object-contain"
+            />
+           </div>
+           <p className="text-gray-600 text-sm font-medium">
+             <a
+                    href="https://www.instagram.com/queensconcretetoboggan/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-blue-600 hover:text-blue-800 font-semibold"
+                 >
+                   @queensconcretetoboggan
+                  </a>
+           </p>
+          </div>
+
 
           {/* Right - Copyright */}
           <div className="text-center md:text-right text-gray-600 text-sm">

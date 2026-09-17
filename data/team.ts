@@ -32,7 +32,7 @@ export const teamMembers: TeamMember[] = [
   { name: "Oliver Price", role: "Ski Profile Head" },
 
   // Leadership – Mechanical
-  { name: "Darryl Gladston", role: "Mechanical Head" },
+  { name: "Eddie Fitzgerald", role: "Mechanical Head" },
   { name: "Ryan Johnston", role: "Mechanical Head" },
   { name: "Nicholas Letourneau", role: "Mechanical Head" },
   { name: "Justin MacLeod", role: "Mechanical Head" },
